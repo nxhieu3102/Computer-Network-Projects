@@ -6,7 +6,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 posts = [
     {
@@ -85,16 +85,37 @@ def account():
 @app.route("/predict", methods = ['POST'])
 def predict():
     text = request.get_json().get("message")
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=text,
-        temperature=0.6,
-        max_tokens=100,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0,
-    )
-    message = {"answer" : response.choices[0].text}
+    message = ''
+    prompt = text
+    if 'photo' in text.lower() or 'photograph' in text.lower() or 'image' in text.lower() or 'picture' in text.lower() or 'draw' in text.lower():
+        model_engine = "image-alpha-001"
+        num_images = 1
+        size = "512x512"
+        response_format = "url"
+        try:
+            response = openai.Image.create(
+                prompt=prompt,
+                n=num_images,
+                size=size,
+                response_format=response_format,
+                model=model_engine
+            )
+            image_url = response['data'][0]['url']
+        except Exception as e:
+            print(f"Error: {e}")
+            image_url = ''
+        message = {"answer" : image_url, "type" : "image"}
+    else:
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=prompt,
+            temperature=0.6,
+            max_tokens=100,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0,
+        )
+        message = {"answer" : response.choices[0].text, "type" : "text"}
     return jsonify(message)
 
 

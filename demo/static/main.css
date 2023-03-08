@@ -188,6 +188,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: var(--primaryBoxShadow);
+  height : 90px;
 }
 
 .chatbox__image--header {
@@ -200,8 +201,9 @@
 }
 
 .chatbox__description--header {
-  font-size: .9rem;
   color: white;
+  font-size : 1.1rem;
+  padding-top : 15px;
 }
 
 /* Messages */
@@ -231,7 +233,6 @@
   color: white;
 }
 
-/* FOOTER */
 .chatbox__footer {
   display: flex;
   flex-direction: row;
@@ -245,13 +246,33 @@
   margin-top: 20px;
 }
 
-.chatbox__footer input {
+
+.chatbox__footer #search-form {
   width: 80%;
   border: none;
   padding: 10px 10px;
   border-radius: 30px;
   text-align: left;
 }
+
+.chatbox__footer #search-form input {
+  width: 90%;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.chatbox__footer #search-form button {
+  position: absolute;
+  padding-top: 1%;
+  padding-left: 5%;
+  font-size: 1.7em;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
 
 .chatbox__send--footer {
   color: white;
