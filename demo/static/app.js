@@ -2,8 +2,8 @@ class Chatbox {
     constructor() {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),
-            chatBox : document.querySelector('.chatbox__support'),
-            sendButton : document.querySelector('.send__button')
+            chatBox: document.querySelector('.chatbox__support'),
+            sendButton: document.querySelector('.send__button')
         }
 
         this.state = true;
@@ -11,13 +11,13 @@ class Chatbox {
     }
 
     display() {
-        const {openButton, chatBox, sendButton} = this.args;
+        const { openButton, chatBox, sendButton } = this.args;
         console.log("hello");
         openButton.addEventListener('click', () => this.toggleState(chatBox))
-        sendButton.addEventListener('click',() => this.onSendButton(chatBox))
+        sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
         const node = chatBox.querySelector('input');
-        node.addEventListener("keyup",({key : string}) => {
+        node.addEventListener("keyup", (key) => {
             if (key === "Enter") {
                 this.onSendButton(chatBox)
             }
@@ -41,33 +41,33 @@ class Chatbox {
             return;
         }
 
-        let msg1 = {name : "User", message : text1}
+        let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch($SCRIPT_ROOT + '/predict',{
+        fetch($SCRIPT_ROOT + '/predict', {
             method: 'POST',
-            body : JSON.stringify({message : text1}),
-            mode : 'cors',
-            headers : {
-                'Content-Type' : 'application/json'
+            body: JSON.stringify({ message: text1 }),
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
             },
         })
-        .then(r => r.json())
-        .then(r => {
-            let msg2 = {name : "GPT", message : r.answer}
-            this.messages.push(msg2);
-            this.updateChatText(chatbox);
-            textField.value = '';
-        }).catch((error) => {
-            console.error('Error:' , error);
-            this.updateChatText(chatbox);
-            textField.value = '';
-        });
+            .then(r => r.json())
+            .then(r => {
+                let msg2 = { name: "GPT", message: r.answer }
+                this.messages.push(msg2);
+                this.updateChatText(chatbox);
+                textField.value = '';
+            }).catch((error) => {
+                console.error('Error:', error);
+                this.updateChatText(chatbox);
+                textField.value = '';
+            });
     }
 
     updateChatText(chatbox) {
         var html = '';
-        this.messages.slice().reverse().forEach(function(item,index) {
+        this.messages.slice().reverse().forEach(function (item, index) {
             if (item.name === "GPT") {
                 html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>';
             } else {
