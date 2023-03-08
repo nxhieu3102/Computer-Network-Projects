@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -80,20 +81,21 @@
                           <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
                       </div>
                       <div class="chatbox__content--header">
-                          <h4 class="chatbox__heading--header">Chat support</h4>
-                          <p class="chatbox__description--header">Hi. My name is GPT. How can I help you?</p>
+                          <p class="chatbox__description--header">Hi. My name is HĐT. How can I help you?</p>
                       </div>
                   </div>
                   <div class="chatbox__messages">
                       <div></div>
                   </div>
                   <div class="chatbox__footer">
-                      <input type="text" placeholder="Write a message...">
-                      <button class="chatbox__send--footer send__button">Send</button>
+                    <form id = "search-form">
+                        <input type="text" placeholder="Give a message...">
+                    </form>
+                    <button class="chatbox__send--footer send__button">Send</button>
                   </div>
               </div>
               <div class="chatbox__button">
-                  <button><img src="{{ url_for('static', filename='images/chatbox.svg') }}" /></button>
+                  <button><img src="{{ url_for('static', filename='profile_pics/chatbox.svg') }}" /></button>
               </div>
           </div>
       </div>
@@ -102,8 +104,14 @@
         $SCRIPT_ROOT = {{ request.script_root|tojson }};
       </script>
       <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+<<<<<<< HEAD
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+=======
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+>>>>>>> cef14dc25a3d9c8e625caf58332df5e50e41d32a
     </body>
 </html>
