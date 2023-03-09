@@ -8,7 +8,7 @@ from time import time,sleep
 from uuid import uuid4
 import datetime
 
-openai.api_key = "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"
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
