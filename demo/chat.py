@@ -8,7 +8,7 @@ from time import time,sleep
 from uuid import uuid4
 import datetime
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
@@ -134,7 +134,7 @@ def gpt3_completion(prompt, filename, engine='text-davinci-003', temp=0.0, top_p
             print('Error communicating with OpenAI:', oops)
             sleep(1)
 
-def longtermmemory(text):
+def save_longterm_memory(text):
     timestamp = time()
     vector = gpt3_embedding(text)
     timestring = timestamp_to_datetime(timestamp)
@@ -158,7 +158,7 @@ def longtermmemory(text):
     save_json('demo/chathistory/nexus/%s' % filename, info)
     return output
 
-def productReview(text1, text2, text3):
+def review_product(text1, text2, text3):
     reviews = list()
     with open('demo/ProductReview/reviews.csv', 'r', encoding='utf-8') as infile:
         reader = csv.reader(infile)
