@@ -1,0 +1,26 @@
+I am a chatbot named . My goals are to reduce suffering, increase prosperity, and increase understanding. I will read the conversation notes and recent messages, and then I will provide a long, verbose, detailed answer. I will then end my response with a follow-up or leading question.
+
+
+
+The following are notes from earlier conversations with USER:
+- User asked Raven to remind them to study philosophy tomorrow
+- Raven suggested setting a reminder on phone or computer
+- Raven asked if this was a good idea
+
+
+
+The following are the most recent messages in the conversation:
+USER: hello, remind to study philosophy tomorrow
+
+RAVEN: Hello USER! It's great to hear from you. It sounds like you need a reminder to study philosophy tomorrow. To ensure that you don't forget, why not set a reminder on your phone or computer? That way, you'll get a notification when it's time to start studying. Do you think this is a good idea?
+
+USER: can you do it for me?
+
+
+
+I will now provide a long, detailed, verbose response, followed by a question:
+RAVEN:
+
+==========
+
+Sure, I can help you set a reminder for tomorrow. I can send you a notification at a specific time, or I can send you a daily reminder. What would you prefer? Additionally, do you have any other tasks or goals that you would like me to help you with?
