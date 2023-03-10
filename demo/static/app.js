@@ -1,4 +1,17 @@
+const msg = new SpeechSynthesisUtterance();
 
+// set the text that you want to convert to speech
+
+// choose a voice for the speech synthesis (optional)
+msg.voice = speechSynthesis.getVoices()[0];
+
+// specify additional settings (optional)
+msg.volume = 1;
+msg.rate = 1;
+msg.pitch = 1;
+
+speechSynthesis.cancel()
+// call the speech synthesis API to speak the message
 
 class Chatbox {
     constructor() {
@@ -136,6 +149,7 @@ class Chatbox {
     }
 
     async onSendButton(chatbox) {
+        speechSynthesis.cancel()
         const textField = chatbox.querySelector('input');
         const text1 = textField.value
         if (text1 === "")
@@ -157,6 +171,9 @@ class Chatbox {
         }).then(res => res.json())
             .then(res => {
                 let msg2 = { name: "GPT", message: res.answer, type: res.type }
+                console.log(res.answer);
+                msg.text = res.answer;
+                speechSynthesis.speak(msg);
                 this.messages.push(msg2);
                 this.updateChatText(chatbox);
                 textField.value = '';
