@@ -4,4 +4,4 @@ Summarize the following product reviews as a list of key strengths, weaknesses, 
 <<REVIEWS>>
 
 
-List of all key strengths, weaknesses, and improvments for this product:
+Tell strengths, weaknesses, and improvments for this product:

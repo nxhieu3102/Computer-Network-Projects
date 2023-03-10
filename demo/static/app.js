@@ -147,7 +147,7 @@ class Chatbox {
 
         fetch($SCRIPT_ROOT + '/predict',{
             method: 'POST',
-            body : JSON.stringify({message : text1}),
+            body : JSON.stringify({message : text1, type : ""}),
             mode : 'cors',
             headers : {
                 'Content-Type' : 'application/json'

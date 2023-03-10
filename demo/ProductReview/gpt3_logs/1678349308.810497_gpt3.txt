@@ -1,0 +1,48 @@
+Summarize the following product reviews as a list of key strengths, weaknesses, and improvements.
+
+
+Recommended. - Product works as advertised, no issues. Recommended.
+;surely worth the cost, but might last a little less than other big brands. - can't beat the price, but i could sweat my energizers last a little longer. i'll shoot from the hip here: i think the dollars/output is better than energizers, but if battery life is the only real variable i might go with commercial battery brands. please note- this is not carefully measures, just first glance based on kids playing with toys...
+;Still checking the life - So far so good!, I put dates on these batteries to check the life line when installed into batteries power items. I'll have future updates on this items. Stand by!
+;Three Stars - Doesn't hold the strength of Duracell, etc.
+;Great battery's at a awesome price. - I will from now on but Amazon battery's! Super cheap and they actually last when compared to other overly priced battery's. it's a no brainer.
+;Five Stars - Great value.
+;Five Stars - good as any name brand
+;Four Stars - Have not had him long enough to evaluates 0
+;They work for me. - Works as well if not better than other batteries. Will order again.
+;Three Stars - Bargin.
+;Great Basics Product - These batteries seem to hold up fine.
+;terrific - terrific
+;Four Stars - did the job
+;Four Stars - good for the price
+;Five Stars - Great price.
+;Great, inexpensive batteries. - I seriously don't think I will buy these from the store ever again. These are half the price, and work well in all of my electronics.
+;Five Stars - Lasts long, cheap prices...
+;Five Stars - working great
+;Five Stars - Batteries. Work well
+;Good lifespan, price and quality control - Ought these because of the price and quantity. So far we haven't had any duds and they are working great! None have corrosion either. We are storing them in the laundry room to ensure temperature control and so far feel that the quality is comparable to name brands.
+;Five Stars - Great deal, long lasting life.
+;Cheap but seems to work fine - Works just as well as any other batteries just much cheaper!
+;Five Stars - All was good
+;Five Stars - Nice
+;Five Stars - Handy to have. Work well
+
+
+List of all key strengths, weaknesses, and improvments for this product:
+
+
+==========
+
+Strengths:
+- Works as advertised
+- Worth the cost
+- Better dollars/output than energizers
+- Good lifespan, price and quality control
+- Works just as well as any other batteries
+- Long lasting life
+- Handy to have
+Weaknesses:
+- Might last a little less than other big brands
+- Doesn't hold the strength of Duracell, etc.
+Improvements:
+- None noted

@@ -1,0 +1,54 @@
+Summarize the following product reviews as a list of key strengths, weaknesses, and improvements.
+
+
+Great batteries,These batteries are great! They work well and last really long. I figured these batteries would be a complete dud, but that's definitely not the case. Highly recommend!
+;which seems to work just fine.,A less costly alternative to the name brands, which seems to work just fine.
+;Cheap, but do not last.,These batteries leak easily and I found them hard to insert into a toy that required AAA. Did not have this problem when I switched them with brand name batteries.
+;Five Stars,They're batteries. They work. Mine came packaged fantastically in this little box. I couldn't want anything more.
+;I am so glad these are part of the basics,Amazon Basics. I am so glad these are part of the basics. I love these batteries. I get equal or better performance as you might expect from Duracel or Energizer. The benefit is that I pay less. Every single time I walk past batteries in a store I think, Amazon Basics and then like Vector from Despicable Me, I can hear, Oh YEAH!
+;Good.,Good price, good batteries.
+;Five Stars,Can not believe how much I was paying for batteries before these!
+;Awesome deal!,What a deal! Awesome now I always have plenty of batteries at home. Also this was a very good value for the money.
+;Best Batteries EVER,Best Battery Deal! They last as long as Duracell and Energizer!
+;Solid B+ batteries!,These batteries are pretty good have a long life would recommend
+;Another great deal.,These seem to work / last like any other quality battery. Packaged well. Great price. Thus far, every AmazonBasics product I've bought has been high in quality (and great in price). I'm expecting the same here.Keep this up, Amazon, and I'll keep coming back.
+;Three Stars,Bargin.
+;Disappointed,Does not turn well at all. Will be returning it
+;Five Stars,ordered several sizes they seem to be working well after a few months. Will buy again, esp 9V
+;Scale looks nice, but display has issues.,The scale arrived earlier than expected, and came packaged nicely. No visible damage on the box, so I was excited to test it out. The scale came with batteries, which was very convenient. However, upon turning on the scale, I discovered that the entire lower line of the display failed to light up and change (I.E: an 8 looks like an A, 3 looks like a backwards F). Other than that, this scale would have been fantastic. One thing to note, the weighing platform is not silver itself, but rather appears to be a silver plastic.
+;Five Stars,Standard batteries but they work. Thanks Amazon :)
+;Great Batteries on a Budget!,These are great batteries for the price. I purchased these batteries for my son, who loves listening to books on the Play-Away pods from the library. They seem to last the same amount of time as any name brand battery. I will be buying these again the future.
+;Great price, great product,Nothing to complain. Great price, great product!
+;Five Stars,These batteries perform as well as name brand batteries, I have not had any issues with them.
+;Great batteries and great price,I bought these batteries because I needed alot for my trail cameras. The price of these ultimately was the reason I purchased them over the name brands. They seem to be lasting just as long or longer than any of the name brands that I have used.
+;Great,Great batteries and for a good price!
+;Five Stars,Seem to be good as any other battery. I'd say, go for it.
+;Great alternative to Duracell,Great alternative to Duracell. I needed batteries quickly and didn't want to get an overpriced pack from the drugstore, so I got these and they have been holding up well so far (it's been a few months).
+;AmazonBasics AAA Performance Alkaline...,VERY SATISFIED ....
+;Five Stars,Great batteries!!!
+
+
+Tell strengths, weaknesses, and improvments for this product:
+
+
+==========
+
+Strengths:
+- Lasts long
+- Works well
+- Less costly alternative to name brands
+- Good price
+- Great performance
+- Great value for the money
+- Good quality
+- Great deal
+- Lasts as long as Duracell and Energizer
+- Solid B+ batteries
+- Great alternative to Duracell
+Weaknesses:
+- Leak easily
+- Hard to insert into a toy
+- Scale display has issues
+Improvements:
+- Make batteries easier to insert into toys
+- Improve scale display

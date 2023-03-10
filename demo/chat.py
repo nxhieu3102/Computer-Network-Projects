@@ -7,8 +7,11 @@ import re
 from time import time,sleep
 from uuid import uuid4
 import datetime
+import csv
+import random
 
-openai.api_key = "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"
+
+openai.api_key = "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"
 
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
@@ -158,20 +161,16 @@ def longtermmemory(text):
     save_json('demo/chathistory/nexus/%s' % filename, info)
     return output
 
-def productReview(text1, text2, text3):
+def productReview(text1, text2):
     reviews = list()
     with open('demo/ProductReview/reviews.csv', 'r', encoding='utf-8') as infile:
         reader = csv.reader(infile)
         for row in reader:
-            if text1 in row[0].lower() and text2 in row[0].lower() and 'charger' not in row[0].lower():
-                reviews.append(row[1] + ' - ' + row[2])
+            if text1 in row[0].lower() and text2 in row[0].lower():
+                reviews.append(row[1] + ',' + row[2])
     random.seed()
-    summaries = list()
-    for i in list(range(0,10)):
-        subset = random.choices(reviews, k=25)
-        textblock = '\n-'.join(subset)
-        prompt = open_file('demo/ProductReview/prompt.txt').replace('<<REVIEWS>>', textblock)
-        response = gpt3_completion(prompt,"ProductReview")
-        summaries.append(response)
-    textblock = '\n-'.join(summaries)
-    return textblock
+    subset = random.choices(reviews, k=25)
+    textblock = '\n;'.join(subset)
+    prompt = open_file('demo/ProductReview/prompt.txt').replace('<<REVIEWS>>', textblock)
+    response = gpt3_completion(prompt,"ProductReview")
+    return response

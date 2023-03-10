@@ -1,0 +1,58 @@
+Summarize the following product reviews as a list of key strengths, weaknesses, and improvements.
+
+
+Yes, i have batteries. - Best bang for buck on batteries, and always good to have a small stock of them on hand for whatever you might need.split this with my roommate, and so we now each have some AAA and we also split a pack of AA, great for the controllers that dont get used regularly, toys, remotes, whatever, if you plan ahead, it is worth it.
+-Five Stars - Works
+-Reliable batteries at a good price - I have switched to AmazonBasics brand after trying just about every brand there is. Good, reliable batteries.
+-Five Stars - It is impossible to beat this quality for this price.
+-Great for the price. - Plenty of power for your average household ham and egger.
+-Bought these for my sisters day care. She said ... - Bought these for my sisters day care. She said half of them did not work at all, were dead when received
+-Great product. - Exactly as advertised! Great product.
+-They're good - Came on time and in one piece. Haven't noticed a difference in quality between these batteries and any other name brand.
+-Five Stars - awesome!
+-Decent Batteries, Great price! - Amazon Batteries! They got me on the price, but how's the performance! Honestly I can't tell cause who's counting I usually by pro cells because Sometimes I'm a pro. Just kidding but really i work in entertainment so we use pro cells but I bought a box of these just to keep handy and save the day when pro cells are not available. These really aren't that bad. Pro TIP: Make sure you dispose them properly so you don't kill the earth. I'd definitely buy these again. Now that I am a father, there's all kinda of other things to put batteries in. Also do not skimp out on your earthquake kit. It sounds like whatever but honestly you need to prepare folks!
+-Four Stars - Great cost/cell option. Capacity isn't the best, but works great in low draw devices like remotes, etc.
+-A+ - The batteries works very well. Great quality. You can't beat the price
+-Five Stars - Good batteries will buy again.
+-Five Stars - works great, long lasting.
+-Great value and performance - The toy companies and the battery making companies have a long running conspiracy to make you buy millions of batteries for your kids' toys. Thanks to Amazon, I can break the cycle of the evil conspiracy and just buy these cheap but long lasting batteries! Thanks Amazon for helping me stick it to the man.
+-C...R....A...P!!! - I can only think of one way to describe this item...JUNK!!!
+-Five Stars - Good.
+-7 brands, 1 test: results - AmazonBasics batteries are quite good in terms of capacity -- pretty much tied for the top spot compared to the other 6 brands I've tested, but other brands have the edge in capacity per dollar. When I computed value by dividing capacity by the cost per battery of the cheapest package size, they took a respectable third place, and they have the advantage of being a trusted name compared to the value leader. In the images I have attached a graph and a table summarizing my test results for the 7 types I've tested, but if you'd like to know more about how I test ... on to the in-dept test review.I've been on a bit of a quest to test all of the top-selling aaa batteries on Amazon in a repeatable, precise way. This means the same equipment, same environmental conditions, and same slots in the equipment will be used for each test. For each test, I fully discharge 3 batteries in my Opus BT-C2000 battery analyzer at rates of 100 ma, 200 ma, and 400 ma (discharge rate affects usable capacity). I have also performed this exact same test (same equipment, same conditions) on the ACDelco, Duracell Procell, Duracell Coppertop, Energizer MAX, Maxell, and Rayovac. I have linked the other brands I've reviewed at the end of this review if you'd like to take a look at the other results for comparison purposes. For the Amazon Basics batteries, the capacity at each discharge rate was:Disch Rt Capacity Runtime Sample use case100 mA 997 mAh 10 hrs Low-power LED flashlight200 mA 914 mAh 4.5 hrs Electronic toy / medium LED flashlight400 mA 623 mAh 1.5 hrs Motorized toy / bright LED flashlightNote that these (and all other Alkalines) would achieve somewhat higher capacity (maybe 1200 mAh) in a low discharge application like a mouse, keyboard, remote control, etc because alkaline batteries have internal resistance that reduces usable capacity at high discharge rates.The capacity of these batteries is among the best I've tested -- take a look at the attached data table for comparative data. For the cost (0.31/ea in a 36 pack right now), these are a decent but beatable value -- the power supplied per dollar spent is very good, but eclipsed by other currently available options.Comparison:These batteries do well capacity-wise, but value-wise are blown away by the currently cheapest energy/dollar battery that I've tested, the ACDelco aaa's. Their capacity results were:Disch Rt Capacity Runtime100 mA 1005 mAh 10 hrs200 mA 864 mAh 4.3 hrs400 mA 670 mAh 1.7 hrsAs you can see, the Amazon batteries were very comperable ... but, at the current time the AmazonBasics batteries are 0.31/ea (36 pack), while the ACDelco batteries are about 0.21/ea (48 pack) -- so the ACDelco are significantly cheaper per mAh. I did not test shelf life, so it's possible that these may hold up better sitting in a drawer. Although both the Amazon batteries and the ACDelco batteries are certainly made on contract by a third party, I do think that I trust Amazon a bit more to provide consistent batteries than ACDelco ... although I haven't had any trouble with my ACDelco batteries so far. It's also worth noting that the Amazon batteries come in clearly superior packaging - while the ACDelco batteries come in a horrible gigantic plastic blister pack, the Amazon batteries come in a closable cardboard box. If you don't go through a lot of batteries organization of your battery drawer is important to you, that could push them into the all-around winner category despite the 50 price premium.Finally, because another review specifically mentions the Rayovac AA's as being 'good' in some usage scenarios, I thought I'd share my findings for the Rayovac AAA's. In short, they're garbage - the Amazon batteries are better in EVERY case. It's possible that the Rayovac AA's are much better than the AAA's, but I think it's more likely that the version of the Rayovacs tested by the website that he got his results from is different than the most popular Rayovac on Amazon (I source all of my batteries from Amazon). I ran the Rayovac test several times because I couldn't believe how poorly they did ... here are some typical Rayovac results:Disch Rt Capacity Runtime100 mA 908 mAh 9 hrs200 mA 590 mAh 2.9 hrs400 mA 443 mAh 1.1 hrsMy other battery tests/reviews:I have posted reviews for Duracell Coppertop, Duracell Procell and ACDelco aaa alkaline batteries with capacity data gathered using the exact same method and equipment. To find those reviews for comparison purposes, go to the product pages linked below and search for 'mah' under 'all reviews' (or just browse to them on my profile). If/when I do additional aaa tests/reviews in the future, I will update this list.ACDelco AAA Super Alkaline BatteriesDuracell AAA Batteries Coppertop MN2400 - 20 PackDuracell Procell AAA Batteries PC2400BKD09Energizer MAX AAA BatteriesMaxell Alkaline Battery AAA CellRayovac Alkaline AAA Batteries
+-Just buy these! Perfection - These come packaged into 4's, love that! I bought them specifically for the emergency lanterns I got and since they are packed separated into 4's I can put them with the lanterns perfectly. They work great and have had ZERO problems with these. Definitely recommend!
+-Five Stars - Batteries work great, no issues. I will be buying again when I run low.
+-Sometimes with name brand items you are paying for the brand not the quality - Exceptional batteries for the price. Just as good if not betterthan major brands. Sometimes you just pay extra for the brand. That is a waste of money.Quality can be found at a reasonable price like these batteries. Duracell and other brands are asking you topay for there brand name. Sometimes there is a difference. In this case I could not find any reason to pay a higher price.
+-Five Stars - These have lasted longer than some other brands. Definitely keeping these stocked up!!
+-Good for the money - Good deal that why I bought it, you should buy it too.
+-Can't beat the price. See how long they last ... - They are Super , had them in my outdoor weather station sensors for 10 months and in with all types of weather conditions and they are still working !!!!!!!!!
+-Five Stars - they are batteries, they work
+
+
+List of all key strengths, weaknesses, and improvments for this product:
+
+
+==========
+
+Strengths:
+- Best bang for buck on batteries
+- Reliable batteries at a good price
+- It is impossible to beat this quality for this price
+- Plenty of power for your average household ham and egger
+- Exactly as advertised! Great product
+- Haven't noticed a difference in quality between these batteries and any other name brand
+- Great cost/cell option
+- A+ - The batteries works very well. Great quality
+- Good batteries will buy again
+- Works great, long lasting
+- Great value and performance
+- They are Super, had them in my outdoor weather station sensors for 10 months and in with all types of weather conditions and they are still working
+Weaknesses:
+- Half of them did not work at all, were dead when received
+- Capacity isn't the best, but works great in low draw devices like remotes, etc
+- Value-wise are blown away by the currently cheapest energy/dollar battery that I've tested
+- I can only think of one way to describe this item...JUNK!!!
+Improvements:
+- Better capacity per dollar spent
+- Better shelf life
+- Better packaging
+- More consistent batteries

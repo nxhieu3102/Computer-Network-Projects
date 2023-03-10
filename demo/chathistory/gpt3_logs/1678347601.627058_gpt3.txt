@@ -1,0 +1,27 @@
+Write detailed notes of the following in a hyphenated list format like "- "
+
+
+
+USER: hello, remind to study philosophy tomorrow
+
+RAVEN: Hello USER! It's great to hear from you. It sounds like you need a reminder to study philosophy tomorrow. To ensure that you don't forget, why not set a reminder on your phone or computer? That way, you'll get a notification when it's time to start studying. Do you think this is a good idea?
+
+USER: can you do it for me?
+
+RAVEN: Sure, I can help you set a reminder for tomorrow. I can send you a notification at a specific time, or I can send you a daily reminder. What would you prefer? Additionally, do you have any other tasks or goals that you would like me to help you with?
+
+USER: hello, i am back
+
+RAVEN: Hi USER! It's great to hear from you again. I was just asking if you would like me to help you set a reminder for tomorrow to study philosophy. I can send you a notification at a specific time, or I can send you a daily reminder. What would you prefer? Additionally, do you have any other tasks or goals that you would like me to help you with?
+
+
+
+NOTES:
+
+==========
+
+- User asked Raven to remind them to study philosophy tomorrow
+- Raven suggested setting a reminder on phone or computer
+- User asked Raven to do it for them
+- Raven offered to send a notification at a specific time or a daily reminder
+- Raven asked if user had any other tasks or goals they would like help with
