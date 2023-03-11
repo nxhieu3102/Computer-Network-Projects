@@ -1,97 +1,120 @@
-  body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 100%;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
+body {
+  background: linear-gradient(-45deg, #e8eeec, #d3cdcf, #d0d4d5, #757b7a);
+  background-size: 400% 400%;
 
-  *, html {
-    --primaryGradient: linear-gradient(93.12deg, #5f788a 0.52%, #356b91 100%);
-    --secondaryGradient: linear-gradient(268.91deg, #5f788a -2.14%, #356b91 99.69%);
-    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --primary: #5f788a;
-  }
+  color: #333333;
+  margin-top: 5rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+}
 
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
-    white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
+}
 
-  /* CHATBOX
+*,
+html {
+  --primaryGradient: linear-gradient(93.12deg, #2bccf4 0.52%, #356b91 100%);
+  --secondaryGradient: linear-gradient(268.91deg, #2bccf4 -2.14%, #356b91 99.69%);
+  --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+  /*--primary: #5f788a;*/
+}
+
+button:focus{
+  outline: 0;
+}
+
+.bg-steel {
+  /*background-color: #5f788a;*/
+  background: linear-gradient(93.12deg, #2bccf4 0.52%, #356b91 100%);
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.content-section:hover {
+  color: rgb(15, 13, 13);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+  text-decoration: none;
+}
+
+.article-title {
+  color: #444444;
+  text-align: center;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  padding-top: 15px;
+}
+
+.article-img {
+  height: 280px;
+  width: 190px;
+  /* margin-right: 16px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* CHATBOX
 =============== */
 .chatbox {
   position: absolute;
@@ -101,22 +124,40 @@
 
 /* CONTENT IS CLOSE */
 .chatbox__support {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   background: #eee;
   width: 300px;
   height: 350px;
   z-index: -123456;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 200ms ease-in-out;
+  transform: translate(-40px) scale(0);
+  background-color: white;*/
+  /*display: flex;
+  flex-direction: column;*/
+
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  /* right: 2%; */
+  display: flex;
+  flex-direction: column;
+  transform: translate(-40px) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: -123456;
+  background-color: white;
 }
 
 /* CONTENT ISOPEN */
 .chatbox--active {
-  transform: translateY(-40px);
+  /*transform: translateY(-40px);*/
+  /*transform: translateY(-40px);*/
   z-index: 123456;
-  opacity: 1;
-
+  transform: translateY(-40px) scale(1);
+  /*opacity: 1;*/
 }
 
 /* BUTTON */
@@ -131,7 +172,6 @@
   outline: none;
   cursor: pointer;
 }
-
 
 /* HEADER */
 .chatbox__header {
@@ -170,8 +210,8 @@
 
 .chatbox__support {
   background: #f9f9f9;
-  height: 450px;
-  width: 350px;
+  height: 540px;
+  width: 420px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -188,7 +228,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: var(--primaryBoxShadow);
-  height : 90px;
+  height: 90px;
 }
 
 .chatbox__image--header {
@@ -202,8 +242,8 @@
 
 .chatbox__description--header {
   color: white;
-  font-size : 1.1rem;
-  padding-top : 15px;
+  font-size: 1.1rem;
+  padding-top: 15px;
 }
 
 /* Messages */
@@ -213,7 +253,7 @@
 
 .messages__item {
   margin-top: 10px;
-  background: #E0E0E0;
+  background: #e0e0e0;
   padding: 8px 12px;
   max-width: 70%;
 }
@@ -246,7 +286,6 @@
   margin-top: 20px;
 }
 
-
 .chatbox__footer #search-form {
   width: 80%;
   border: none;
@@ -273,7 +312,6 @@
   border: none;
 }
 
-
 .chatbox__send--footer {
   color: white;
 }
@@ -290,4 +328,21 @@
   border-bottom-left-radius: 50px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
