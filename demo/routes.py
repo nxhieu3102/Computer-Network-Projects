@@ -37,6 +37,11 @@ def home():
 def about():
     return render_template('about.html', title = 'About')
 
+
+@app.route("/get-started")
+def get_started():
+    return render_template('get-started.html', title = 'About')
+
 @app.route("/register", methods = ['GET','POST'])
 def register():
     if current_user.is_authenticated:

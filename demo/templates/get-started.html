@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="doc">
+    <div class="doc-nav">
+        <a class="doc-link" href="#doc-intro">Introcduction</a>
+        <a class="doc-link" href="#doc-setup">Setup</a>
+        <a class="doc-link" href="#doc-features">Features</a>
+        <a class="doc-link" href="#doc-feature__GPT3">GPT - 3</a>
+        <a class="doc-link" href="#doc-feature__DALLE">DALL - E</a>
+        <a class="doc-link" href="#doc-feature__WHISPER">Whisper</a>
+        <a class="doc-link" href="#doc-feature__TTS">Text to speech</a>
+        <a class="doc-link" href="#doc-demo">Demo</a>
+    </div>
+    <div class="doc-body">
+        <div class = "doc-parent" id="doc-intro">
+            <div class="doc-head">Introduction</div>
+
+            <div class="doc-des">
+                The OpenAI API can be applied to virtually any task that involves understanding or generating natural
+                language or code. We offer a spectrum of models with different levels of power suitable for different
+                tasks, as well as the ability to fine-tune your own custom models. These models can be used for
+                everything from content generation to semantic search and classification.
+            </div>
+        </div>
+        <div class = "doc-parent" id="doc-setup">
+            <div class="doc-head">Setup</div>
+            <div class="doc-des">
+                <div class="code-space">
+                    <button class="btn-copy"><i class="copy-icon fa fa-clone"></i></button>
+                    <pre class="code-space-field">
+
+    <code>git clone https://github.com/nxhieu3102/Computer-Network-Projects</code>
+                    </pre>
+                </div>
+                <div class="code-space">
+                    <div class="btn-copy"><i class="copy-icon fa fa-clone"></i></div>
+                    <pre class="code-space-field">
+
+    <code>pip install -r "requirements.txt"</code>
+                            </pre>
+
+                </div>
+
+                <div class="code-space">
+                    <div class="btn-copy"><i class="copy-icon fa fa-clone"></i></div>
+                    <pre class="code-space-field">
+
+    <code>python run.py</code>
+                            </pre>
+
+                </div>
+            </div>
+
+        </div>
+        <div class = "doc-parent" id="doc-features">
+            <div class="doc-head">Elly Features</div>
+            <div class = "doc-child" id="doc-feature__GPT3">
+                <div class="doc-head">GPT3</div>
+                <div class="doc-des">
+                    The OpenAI API can be applied to virtually any task that involves understanding or generating
+                    natural language or code. We offer a spectrum of models with different levels of power suitable for
+                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
+                    used for everything from content generation to semantic search and classification.
+                </div>
+            </div>
+            <div class = "doc-child" id="doc-feature__DALLE">
+                <div class="doc-head">DALL-E</div>
+                <div class="doc-des">
+                    The OpenAI API can be applied to virtually any task that involves understanding or generating
+                    natural language or code. We offer a spectrum of models with different levels of power suitable for
+                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
+                    used for everything from content generation to semantic search and classification.
+                </div>
+            </div>
+            <div class = "doc-child" id="doc-feature__WHISPER">
+                <div class="doc-head">Whisper</div>
+
+                <div class="doc-des">
+                    The OpenAI API can be applied to virtually any task that involves understanding or generating
+                    natural language or code. We offer a spectrum of models with different levels of power suitable for
+                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
+                    used for everything from content generation to semantic search and classification.
+                </div>
+            </div>
+            <div class = "doc-child" id="doc-feature__TTS">
+                <div class="doc-head">Text to speech</div>
+                <div class="doc-des">
+                    The OpenAI API can be applied to virtually any task that involves understanding or generating
+                    natural language or code. We offer a spectrum of models with different levels of power suitable for
+                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
+                    used for everything from content generation to semantic search and classification.
+                </div>
+            </div>
+        </div>
+        <div class = "doc-parent" id="doc-demo"></div>
+    </div>
+</div>
+
+{% endblock content %}
