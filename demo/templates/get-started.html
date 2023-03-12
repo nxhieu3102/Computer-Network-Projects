@@ -3,30 +3,93 @@
 
 <div id="doc">
     <div class="doc-nav">
-        <a class="doc-link" href="#doc-intro">Introcduction</a>
-        <a class="doc-link" href="#doc-setup">Setup</a>
-        <a class="doc-link" href="#doc-features">Features</a>
-        <a class="doc-link" href="#doc-feature__GPT3">GPT - 3</a>
-        <a class="doc-link" href="#doc-feature__DALLE">DALL - E</a>
-        <a class="doc-link" href="#doc-feature__WHISPER">Whisper</a>
-        <a class="doc-link" href="#doc-feature__TTS">Text to speech</a>
+        <a class="doc-link" href="#doc-intro">Giới thiệu</a>
         <a class="doc-link" href="#doc-demo">Demo</a>
+        <a class="doc-link" href="#doc-setup">Cài đặt</a>
+        <a class="doc-link" href="#doc-features">Tính năng</a>
+        <a class="doc-link doc-link-child" href="#doc-feature__GPT3">GPT - 3</a>
+        <a class="doc-link doc-link-child" href="#doc-feature__DALLE">DALL - E</a>
+        <a class="doc-link doc-link-child" href="#doc-feature__WHISPER">Whisper</a>
+        <a class="doc-link doc-link-child" href="#doc-feature__TTS">Text to speech</a>
     </div>
     <div class="doc-body">
-        <div class = "doc-parent" id="doc-intro">
-            <div class="doc-head">Introduction</div>
+        <div class="doc-parent" id="doc-intro">
+            <div class="doc-head">Giới thiệu</div>
 
             <div class="doc-des">
-                The OpenAI API can be applied to virtually any task that involves understanding or generating natural
-                language or code. We offer a spectrum of models with different levels of power suitable for different
-                tasks, as well as the ability to fine-tune your own custom models. These models can be used for
-                everything from content generation to semantic search and classification.
+                Với sự phát triển chóng mặt của trí tuệ nhân tạo, điển hình là OpenAI với ChatGPT
+                đã làm cho việc tiếp cận vào công nghệ trở nên dễ dàng hơn bao giờ hết. Dựa trên đó,
+                chúng tôi đã tạo ra chatbot được sử dụng với mục đích riêng và hoàn toàn khác biệt
+                với ChatGPT. Dự án được lên ý tưởng và hoàn thiện trong 3 tuần. Những phần của
+                dự án được hoàn thiện một cách nhanh chóng nên khó tránh khỏi những sai sót. Dự án
+                được chia làm 3 phần sau:
+
+                <p class="intro-des-child">1. Thiết kế giao diện người dùng: Sử dụng framework Bootstrap, giao diện được
+                    thiết
+                    kế tương tự như một trang web bán hàng có chứa "trợ lí ảo" để giúp cung cấp cho
+                    người truy cập những thông tin và những lựa chọn hợp lí.</p>
+                <p class="intro-des-child">2. Thiết kế những hoạt động của chatbot: bao gồm cách tương tác giữa người
+                    dùng
+                    với bot, giữa bot với mô-đun của chat GPT và cách để bot tương tác với giao
+                    diện...Đây là phần chiếm nhiều thời gian nhất vì cần phải kết nổi các API của
+                    OpenAI với bot, thiết lập cơ sở dữ liệu và cho bot học để điều hướng theo mong
+                    muốn.</p>
+                <p class="intro-des-child">3. Kiểm tra độ tin cậy và mức độ chính xác của chatbot: bằng những bộ dữ liệu
+                    thuộc các lĩnh vực khác nhau, bao gồm các bộ dữ liệu mà bot chưa được học. Bộ
+                    dữ liệu kiểm tra sẽ có các yêu cầu từ câu trả lời văn bản thông thường đến hình
+                    ảnh và âm thanh.
+                    Hình 1: Giao diện khi giao tiếp với chatbot
+                    6
+                </p>
             </div>
         </div>
-        <div class = "doc-parent" id="doc-setup">
-            <div class="doc-head">Setup</div>
+        <div class="doc-parent" id="doc-demo">
+            <div class="doc-head">Demo</div>
+            <div class="container">
+                <div class="chatbox">
+                    <div class="chatbox__support chatbox--active">
+                        <div class="chatbox__header">
+                            <div class="chatbox__image--header">
+                                <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                                    alt="image">
+                            </div>
+                            <div class="chatbox__content--header">
+                                <p class="chatbox__description--header">Hi. My name is HĐT. How can I help you?</p>
+                            </div>
+                        </div>
+                        <div class="chatbox__messages">
+                            <div></div>
+                        </div>
+                        <div class="chatbox__footer">
+                            <form id="search-form">
+                                <input type="text" placeholder="Give a message..." id="text-input">
+                                <button type="button" id="record-button"><i class="fas fa-microphone"></i></button>
+                            </form>
+                            <button class="chatbox__send--footer send__button">Send</button>
+                        </div>
+                    </div>
+                    <div class="chatbox__button">
+                        <button style="scale: 0"><img
+                                src="{{ url_for('static', filename='profile_pics/chatbox.svg') }}" /></button>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+
+        </div>
+
+        <div class="doc-parent" id="doc-setup">
+            <div class="doc-head">Cài đặt</div>
             <div class="doc-des">
+                OpenAI hỗ trợ các phiên bản Python 3.6 trở lên, Người dùng cần cài đặt ít nhất
+                một trong các phiên bản này để sử dụng OpenAI trên Python. Nếu đang sử dụng
+                phiên bản Python cũ hơn, có thể cần cập nhật phiên bản Python của mình hoặc
+                sử dụng một môi trường ảo để cài đặt phiên bản Python mới hơn chỉ cho mục đích
+                sử dụng OpenAI
                 <div class="code-space">
+                    <p class="setup-text">
+                        1. Tải souce từ github
+                    </p>
                     <button class="btn-copy"><i class="copy-icon fa fa-clone"></i></button>
                     <pre class="code-space-field">
 
@@ -34,6 +97,9 @@
                     </pre>
                 </div>
                 <div class="code-space">
+                    <p class="setup-text">
+                        2. Cài đặt các thư viện cần thiết
+                    </p>
                     <div class="btn-copy"><i class="copy-icon fa fa-clone"></i></div>
                     <pre class="code-space-field">
 
@@ -42,7 +108,13 @@
 
                 </div>
 
+                <p class="setup-text">
+                    3. Thêm API_KEY vào file .env
+                </p>
                 <div class="code-space">
+                    <p class="setup-text">
+                        4. Chạy code
+                    </p>
                     <div class="btn-copy"><i class="copy-icon fa fa-clone"></i></div>
                     <pre class="code-space-field">
 
@@ -53,9 +125,9 @@
             </div>
 
         </div>
-        <div class = "doc-parent" id="doc-features">
-            <div class="doc-head">Elly Features</div>
-            <div class = "doc-child" id="doc-feature__GPT3">
+        <div class="doc-parent" id="doc-features">
+            <div class="doc-head">Tính năng</div>
+            <div class="doc-child" id="doc-feature__GPT3">
                 <div class="doc-head">GPT3</div>
                 <div class="doc-des">
                     The OpenAI API can be applied to virtually any task that involves understanding or generating
@@ -64,36 +136,49 @@
                     used for everything from content generation to semantic search and classification.
                 </div>
             </div>
-            <div class = "doc-child" id="doc-feature__DALLE">
+            <div class="doc-child" id="doc-feature__DALLE">
                 <div class="doc-head">DALL-E</div>
                 <div class="doc-des">
-                    The OpenAI API can be applied to virtually any task that involves understanding or generating
-                    natural language or code. We offer a spectrum of models with different levels of power suitable for
-                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
-                    used for everything from content generation to semantic search and classification.
+                    <p>DALL-E là một mô hình sinh ảnh mới được phát triển bởi OpenAI. Nó cho phép
+                        người dùng tạo ra ảnh mới chỉ bằng cách sử dụng mô tả văn bản. Tên gọi DALL-E
+                        là từ sự kết hợp của tên của nghệ sĩ Salvador Dali và nhân vật tạo ra Pikachu - Pikachu</p>
+                    <p>DALL-E sử dụng một phương pháp tạo ảnh gọi là "Generative Adversarial Net-
+                        works" (GANs). GANs bao gồm hai mô hình khác nhau - một mô hình tạo ra ảnh từ
+                        dữ liệu đầu vào, và một mô hình phân loại để đánh giá tính xác định của ảnh được tạo
+                        ra. Hai mô hình này cùng hoạt động để cải thiện chất lượng của ảnh được tạo ra</p>    
+                    <p>DALL-E cho phép người dùng đưa vào các yêu cầu tạo ảnh dưới dạng mô tả văn
+                        bản, ví dụ như "con ngựa có hình dạng giống như bánh mì" hoặc "một con kiến đang
+                        cưỡi trên một con chó." Sau đó, DALL-E sử dụng mô hình GANs để tạo ra các hình
+                        ảnh đáp ứng yêu cầu</p>    
+                    <p>DALL-E được đánh giá là một công cụ mạnh mẽ cho việc tạo ra ảnh số mới một
+                        cách sáng tạo và độc đáo. Nó có thể được sử dụng trong nhiều lĩnh vực khác nhau, từ
+                        thiết kế đồ họa đến thị trường quảng cáo, và có thể giúp cải thiện quá trình sáng tạo
+                        và phát triển sản phẩm.</p>    
                 </div>
             </div>
-            <div class = "doc-child" id="doc-feature__WHISPER">
+            <div class="doc-child" id="doc-feature__WHISPER">
                 <div class="doc-head">Whisper</div>
 
                 <div class="doc-des">
-                    The OpenAI API can be applied to virtually any task that involves understanding or generating
-                    natural language or code. We offer a spectrum of models with different levels of power suitable for
-                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
-                    used for everything from content generation to semantic search and classification.
+                    <p>Speech-to-Text của Whisper API là một tính năng mạnh mẽ và linh hoạt, cho phép
+                        chuyển đổi giọng nói thành văn bản một cách dễ dàng và hiệu quả. Tính năng này sử
+                        dụng các mô hình học sâu để nhận dạng và chuyển đổi giọng nói thành văn bản, với
+                        độ chính xác cao và tốc độ xử lý nhanh.</p>
+                    <p>Tính năng này có thể được sử dụng để xây dựng các ứng dụng liên quan đến nhận
+                        dạng giọng nói, chẳng hạn như trợ lý ảo, điều khiển bằng giọng nói, chuyển đổi giọng
+                        nói thành văn bản cho người dùng khuyết tật, và cải thiện trải nghiệm người dùng cho
+                        các ứng dụng đòi hỏi nhập liệu bằng văn bản.</p>
                 </div>
             </div>
-            <div class = "doc-child" id="doc-feature__TTS">
+            <div class="doc-child" id="doc-feature__TTS">
                 <div class="doc-head">Text to speech</div>
                 <div class="doc-des">
-                    The OpenAI API can be applied to virtually any task that involves understanding or generating
-                    natural language or code. We offer a spectrum of models with different levels of power suitable for
-                    different tasks, as well as the ability to fine-tune your own custom models. These models can be
-                    used for everything from content generation to semantic search and classification.
+                    Tuy có nhiều tính năng được tích hợp trong chatbot nhưng vì vấn đề kinh phí và
+số lượng dữ liệu không đủ lớn nên chắc chắn các phản hồi từ chatbot của chúng tôi sẽ không thể tốt bằng những sản phẩm đã có như Chat GPT hay Midjourney.
+
                 </div>
             </div>
         </div>
-        <div class = "doc-parent" id="doc-demo"></div>
     </div>
 </div>
 

@@ -4,7 +4,6 @@ const msg = new SpeechSynthesisUtterance();
 
 // choose a voice for the speech synthesis (optional)
 msg.voice = speechSynthesis.getVoices()[0];
-
 // specify additional settings (optional)
 msg.volume = 1;
 msg.rate = 1;
@@ -113,7 +112,7 @@ class Chatbox {
             })
         })
 
-        openButton.addEventListener('click', () => this.toggleState(chatBox))
+        // openButton.addEventListener('click', () => this.toggleState(chatBox))
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
         const node = chatBox.querySelector('input');
