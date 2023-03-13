@@ -10,7 +10,7 @@ import datetime
 import csv
 import random
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
@@ -84,7 +84,10 @@ def summarize_memories(memories):
         identifiers.append(mem['uuid'])
         timestamps.append(mem['time'])
     block = block.strip()
+    if block == '':
+        return "" # no conversation
     prompt = open_file('demo/chathistory/prompt_notes.txt').replace('<<INPUT>>', block)
+    print(prompt)
     notes = gpt3_completion(prompt,"chathistory")
     vector = gpt3_embedding(block)
     info = {'notes': notes, 'uuids': identifiers, 'times': timestamps, 'uuid': str(uuid4()), 'vector': vector, 'time': time()}

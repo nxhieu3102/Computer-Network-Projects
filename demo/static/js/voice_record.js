@@ -24,12 +24,10 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             const downloadLink = document.createElement('a')
             downloadLink.href = audioURL
             audioName = 'audio' + Math.floor(Math.random() * 1000);
-
             downloadLink.setAttribute('download', audioName)
             downloadLink.click()
 
             setTimeout( async() => {
-                console.log("download complete");
                 await fetch($SCRIPT_ROOT + '/whisper', {
                     method: 'POST',
                     body: JSON.stringify({ name: audioName + ".mp3" }),

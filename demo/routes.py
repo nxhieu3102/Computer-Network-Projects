@@ -134,9 +134,9 @@ def predict():
 @app.route("/whisper", methods = ['POST'])
 def whisper():
     audio_name = request.get_json().get("name")
+    audio_name = str(STORE_VOICE) + audio_name
     print(audio_name)
-    print(STORE_VOICE)
-    audio_file= open(str(STORE_VOICE) + audio_name, "rb")
+    audio_file = open(audio_name, "rb")
     transcript = openai.Audio.translate("whisper-1", audio_file)
     response = {"transcript": transcript, "type" : "text"}
     return jsonify(response)

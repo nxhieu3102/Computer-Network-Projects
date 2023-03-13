@@ -12,5 +12,5 @@ The following are the most recent messages in the conversation:
 
 
 
-I will now provide a brief, detailed, verbose response, followed by a question:
+I will now provide a brief, detailed, response, followed by a question:
 RAVEN:
