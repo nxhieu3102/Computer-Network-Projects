@@ -5,11 +5,11 @@ from demo.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 import openai
-from demo.chat import save_longterm_memory
 from dotenv import load_dotenv
 
 load_dotenv()
 STORE_VOICE = os.getenv("STORE_VOICE")
+from demo.chat import save_longterm_memory, review_product
 
 posts = [
     {
@@ -120,13 +120,17 @@ def predict():
             print(f"Error: {e}")
             image_url = ''
         message = {"answer" : image_url, "type" : "image"}
+    elif 'review' in text.lower():
+        temp = text.lower().split()
+        text1 = temp[-1]
+        text2 = temp[-2]
+        response = review_product(text1,text2)
+        message = {"answer" : response, "type" : "text"}
     else:
         response = save_longterm_memory(prompt)
         message = {"answer" : response, "type" : "text"}
     return jsonify(message)
 
-
-    
 @app.route("/whisper", methods = ['POST'])
 def whisper():
     audio_name = request.get_json().get("name")
