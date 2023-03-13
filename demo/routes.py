@@ -6,6 +6,10 @@ from flask_login import login_user, current_user, logout_user, login_required
 import os
 import openai
 from demo.chat import save_longterm_memory
+from dotenv import load_dotenv
+
+load_dotenv()
+STORE_VOICE = os.getenv("STORE_VOICE")
 
 posts = [
     {
@@ -127,7 +131,8 @@ def predict():
 def whisper():
     audio_name = request.get_json().get("name")
     print(audio_name)
-    audio_file= open("C:/Users/nguye/Downloads/" + audio_name, "rb")
+    print(STORE_VOICE)
+    audio_file= open(str(STORE_VOICE) + audio_name, "rb")
     transcript = openai.Audio.translate("whisper-1", audio_file)
     response = {"transcript": transcript, "type" : "text"}
     return jsonify(response)
