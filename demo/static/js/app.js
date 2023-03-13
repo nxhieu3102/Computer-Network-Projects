@@ -1,5 +1,5 @@
 const msg = new SpeechSynthesisUtterance();
-
+let stateVolume = "speaker"
 // set the text that you want to convert to speech
 
 // choose a voice for the speech synthesis (optional)
@@ -27,70 +27,6 @@ class Chatbox {
         const searchForm = this.args.chatBox.querySelector('#search-form');
         const searchFormInput = searchForm.querySelector('input');
 
-        // The speech recognition interface lives on the browser’s window object
-        // const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition; // if none exists -> undefined
-
-        // if (SpeechRecognition) {
-        //     console.log("Your Browser supports speech Recognition");
-
-        //     const recognition = new SpeechRecognition();
-        //     recognition.continuous = true;
-        //     // recognition.lang = "en-US";
-
-        //     searchForm.insertAdjacentHTML("beforeend", '<button type="button"><i class="fas fa-microphone"></i></button>');
-
-        //     const micBtn = searchForm.querySelector("button");
-        //     const micIcon = micBtn.firstElementChild;
-
-        //     micBtn.addEventListener("click", micBtnClick);
-        //     function micBtnClick() {
-        //         if (micIcon.classList.contains("fa-microphone")) { // Start Voice Recognition
-        //             recognition.start(); // First time you have to allow access to mic!
-        //         }
-        //         else {
-        //             recognition.stop();
-        //         }
-        //     }
-
-        //     recognition.addEventListener("start", startSpeechRecognition); // <=> recognition.onstart = function() {...}
-        //     function startSpeechRecognition() {
-        //         micIcon.classList.remove("fa-microphone");
-        //         micIcon.classList.add("fa-microphone-slash");
-        //         searchFormInput.focus();
-        //         //console.log("Voice activated, SPEAK");
-        //     }
-
-        //     recognition.addEventListener("end", endSpeechRecognition); // <=> recognition.onend = function() {...}
-        //     function endSpeechRecognition() {
-        //         micIcon.classList.remove("fa-microphone-slash");
-        //         micIcon.classList.add("fa-microphone");
-        //         searchFormInput.focus();
-        //         //console.log("Speech recognition service disconnected");
-        //     }
-
-        //     recognition.addEventListener("result", resultOfSpeechRecognition); // <=> recognition.onresult = function(event) {...} - Fires when you stop talking
-        //     function resultOfSpeechRecognition(event) {
-        //         const current = event.resultIndex;
-        //         const transcript = event.results[current][0].transcript;
-
-        //         if (transcript.toLowerCase().trim() === "stop recording") {
-        //             recognition.stop();
-        //         }
-        //         else if (!searchFormInput.value) {
-        //             searchFormInput.value = transcript;
-        //         } else if (transcript.toLowerCase().trim() === "go") {
-        //             searchForm.submit();
-        //         } else if (transcript.toLowerCase().trim() === "reset input") {
-        //             searchFormInput.value = "";
-        //         } else {
-        //             searchFormInput.value = transcript;
-        //             console.log(transcript);
-        //         }
-        //     }
-        // }
-        // else {
-        //     console.log("Your Browser does not support speech Recognition");
-        // }
     }
 
     closeModal(chatbox) {
@@ -170,9 +106,9 @@ class Chatbox {
         }).then(res => res.json())
             .then(res => {
                 let msg2 = { name: "GPT", message: res.answer, type: res.type }
-                console.log(res.answer);
                 msg.text = res.answer;
-                speechSynthesis.speak(msg);
+                if(stateVolume === "speaker")
+                    speechSynthesis.speak(msg);
                 this.messages.push(msg2);
                 this.updateChatText(chatbox);
                 textField.value = '';
@@ -211,3 +147,33 @@ class Chatbox {
 
 const chatbox = new Chatbox();
 chatbox.display();
+
+$('.chatbox__header__icon-volume').click(() => {
+    const volumeMute = $('.volume-mute')
+    const volumeSpeaker = $('.volume-speaker')
+
+    stateVolume = volumeMute.css("display") === "none" ? "speaker" : "mute"
+
+
+    if (stateVolume === "speaker") {
+        speechSynthesis.cancel()
+        stateVolume = "mute"
+        if(volumeMute.hasClass('dis-none'))
+            volumeMute.removeClass('dis-none')
+        volumeMute.addClass('dis-block')
+
+        if(volumeSpeaker.hasClass('dis-block'))
+            volumeSpeaker.removeClass('dis-block')
+        volumeSpeaker.addClass('dis-none')
+
+    } else {
+        stateVolume = "speaker"
+        if(volumeSpeaker.hasClass('dis-none'))
+            volumeSpeaker.removeClass('dis-none')
+        volumeSpeaker.addClass('dis-block')
+
+        if(volumeMute.hasClass('dis-block'))
+            volumeMute.removeClass('dis-block')
+        volumeMute.addClass('dis-none')
+    }
+})
