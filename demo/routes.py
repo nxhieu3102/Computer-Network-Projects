@@ -5,21 +5,30 @@ from demo.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 import openai
+from dotenv import load_dotenv
 
-openai.api_key = "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"
+load_dotenv()
+STORE_VOICE = os.getenv("STORE_VOICE")
+from demo.chat import save_longterm_memory, review_product
 
 posts = [
     {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'category': 'ELECTRONICS',
+        'title': 'Iphone 14 Pro',
+        'content': 'Dynamic Island bubbles up music, sports scores, phone calls, and so much more — without taking you away from what you’re doing.',
+        'image' : 'ip14pro.jpg'
     },
     {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'category': 'HEALTH & PERSONAL CARE',
+        'title': 'CeraVe Cream',
+        'content': 'With hyaluronic acid, ceramides and MVE technology for 24 hour hydration. Rich, velvety texture that leaves skin feeling smooth, it is absorbed quickly for softened skin without greasy, sticky, feel.',
+        'image' : 'cerave.jpg'
+    }, 
+    {
+        'category': 'BEAUTY PICKS',
+        'title': "L'Oreal Serum",
+        'content': "Intensive hydrating 1.5 percent Pure Hyaluronic Acid Serum for face with Vitamin C moisturizes skin instantly for dewy glow and visibly plumped skin; Reduces wrinkles and boosts skin's radiance; Effective for all skin tones",
+        'image' : 'loreal.jpg'
     }
 ]
 
@@ -31,6 +40,11 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html', title = 'About')
+
+
+@app.route("/get-started")
+def get_started():
+    return render_template('get-started.html', title = 'About')
 
 @app.route("/register", methods = ['GET','POST'])
 def register():
@@ -82,6 +96,7 @@ def account():
     image_file = url_for('static',filename = 'profile_pics/' + current_user.image_file)
     return render_template('account.html', title = 'Account', image_file = image_file, form = form)
 
+
 @app.route("/predict", methods = ['POST'])
 def predict():
     text = request.get_json().get("message")
@@ -105,19 +120,23 @@ def predict():
             print(f"Error: {e}")
             image_url = ''
         message = {"answer" : image_url, "type" : "image"}
+    elif 'review' in text.lower():
+        temp = text.lower().split()
+        text1 = temp[-1]
+        text2 = temp[-2]
+        response = review_product(text1,text2)
+        message = {"answer" : response, "type" : "text"}
     else:
-        response = openai.Completion.create(
-            model="text-davinci-003",
-            prompt=prompt,
-            temperature=0.6,
-            max_tokens=100,
-            top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0,
-        )
-        message = {"answer" : response.choices[0].text, "type" : "text"}
+        response = save_longterm_memory(prompt)
+        message = {"answer" : response, "type" : "text"}
     return jsonify(message)
 
-
-    
-    
+@app.route("/whisper", methods = ['POST'])
+def whisper():
+    audio_name = request.get_json().get("name")
+    print(audio_name)
+    print(STORE_VOICE)
+    audio_file= open(str(STORE_VOICE) + audio_name, "rb")
+    transcript = openai.Audio.translate("whisper-1", audio_file)
+    response = {"transcript": transcript, "type" : "text"}
+    return jsonify(response)

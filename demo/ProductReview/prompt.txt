@@ -1,0 +1,7 @@
+Summarize the following product reviews as a paragraph of key strengths, weaknesses, and improvements.
+
+
+<<REVIEWS>>
+
+
+Paragraph of all key strengths, weaknesses, and improvments for this product:
